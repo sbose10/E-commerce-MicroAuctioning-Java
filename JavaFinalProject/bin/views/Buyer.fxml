@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="464.0" prefWidth="831.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.BuyerController">
+   <children>
+      <Button layoutX="37.0" layoutY="50.0" mnemonicParsing="false" onAction="#myorders" text="My Orders" />
+      <Button layoutX="37.0" layoutY="107.0" mnemonicParsing="false" onAction="#showoffers" text="Show Offers" />
+      <Button layoutX="37.0" layoutY="166.0" mnemonicParsing="false" onAction="#addOrders" text="Add Orders" />
+      <Button layoutX="38.0" layoutY="200.0" mnemonicParsing="false" onAction="#addToCart" text="AddToCart" />
+      <Button layoutX="39.0" layoutY="302.0" mnemonicParsing="false" onAction="#logout" text="LogOut" />
+      <TableView fx:id="tblAccounts" layoutX="187.0" layoutY="138.0" prefHeight="200.0" prefWidth="227.0">
+       <columns>
+          <TableColumn fx:id="orderId" prefWidth="50.0" text="orderId" />
+          <TableColumn fx:id="orderProductId" prefWidth="50.0" text="orderProductId" />
+           <TableColumn fx:id="askPrice" prefWidth="50.0" text="askPrice" />
+          <TableColumn fx:id="productNm" prefWidth="50.0" text="productNm" />
+        </columns>
+      </TableView>
+    </children> 
+     <children>
+      <TableView fx:id="tblShowOffers" layoutX="187.0" layoutY="225.0" prefHeight="200.0" prefWidth="262.0">
+       <columns>
+          <TableColumn fx:id="offerOrderId" prefWidth="50.0" text="offerOrderId" />
+          <TableColumn fx:id="productName" prefWidth="50.0" text="productName" />
+          <TableColumn fx:id="minOrderQty" prefWidth="50.0" text="minOrderQty" />
+          <TableColumn fx:id="quantity" prefWidth="50.0" text="quantity" />
+          <TableColumn fx:id="priceLimit" prefWidth="50.0" text="priceLimit" />
+          <TableColumn fx:id="price" prefWidth="50.0" text="price" />
+          <TableColumn fx:id="offerQty" prefWidth="50.0" text="offerQty" />
+        </columns>
+      </TableView>
+      <ComboBox fx:id="comboBoxProducts" layoutX="437.0" layoutY="39.0" prefWidth="150.0" promptText="Select Product"/>
+      <ComboBox fx:id="comboBoxOffers" layoutX="437.0" layoutY="39.0" prefHeight="51.0" prefWidth="214.0" promptText="Select offer List" />
+       <Button fx:id="submitOrder" contentDisplay="CENTER" layoutX="449.0" layoutY="232.0" mnemonicParsing="false" onAction="#submitOrder" text="SubmitOrder" />
+       <Button fx:id="showTotal" contentDisplay="CENTER" layoutX="449.0" layoutY="309.0" mnemonicParsing="false" onAction="#showTotal" text="Show Total" />
+      <TextField fx:id="askQuantity" alignment="TOP_LEFT" layoutX="438.0" layoutY="100.0" text="Enter Quantity" />
+      <TextField fx:id="minPrice" alignment="TOP_LEFT" layoutX="438.0" layoutY="169.0" text="Enter Ask Price" />
+      <ImageView fitHeight="61.0" fitWidth="196.0" layoutX="209.0" layoutY="23.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../Images/Logo.PNG" />
+         </image>
+      </ImageView>
+     </children> 
+</AnchorPane>
